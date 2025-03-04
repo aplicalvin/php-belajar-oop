@@ -1,7 +1,7 @@
 <?php
 class Mahasiswa {
     private $nim;
-    private $nama;
+    public $nama;
 
 
     public function setData($nim, $nama) {

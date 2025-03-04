@@ -11,5 +11,10 @@ $matakuliah_1->setData('A11.12345', 'Pemrograman Web Lanjut');
 var_dump($mahasiswa_1->getData());
 echo '<br />';
 var_dump($matakuliah_1->getData());
+echo '<br />';
+var_dump($mahasiswa_1->nama);
+echo '<br />';
+var_dump($mahasiswa_1->nim);
+
 
 ?>
