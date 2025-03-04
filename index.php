@@ -1,14 +1,31 @@
 <?php
 include 'Mahasiswa.php';
-include 'MataKuliah.php';
+include 'MahasiswaTransfer.php';
+// include 'MataKuliah.php';
 
-$mahasiswa_1 = new Mahasiswa();
-$matakuliah_1 = new Matakuliah();
+$daftar_nilai = [
+    "A22.123" => ['sks' => 2, 'nilai' => 'A'],
+    "A22.456" => ['sks' => 3, 'nilai' => 'C'],
+    "A22.789" => ['sks' => 2, 'nilai' => 'B']
+];
+
+
+$mahasiswa_1 = new MahasiswaTransfer($daftar_nilai);
+
+// $mahasiswa_1 = new Mahasiswa();
+// $matakuliah_1 = new Matakuliah();
 
 $mahasiswa_1->setData("A11.2023.14880", "Calvin Samuel Simbolon", "2005-08-23");
-$matakuliah_1->setData('A11.12345', 'Pemrograman Web Lanjut');
+// $matakuliah_1->setData('A11.12345', 'Pemrograman Web Lanjut');
 
-var_dump($mahasiswa_1->getData());
+echo '<pre>';
+print_r($mahasiswa_1->getData());
+echo '<pre>';
+
+
+
+
+// var_dump($mahasiswa_1->getData());
 
 // echo "Umur dihitung dengan rumus : <br />";
 // var_dump($mahasiswa_1->getData()[3]);

@@ -26,7 +26,13 @@ class Mahasiswa {
 
 
     public function getData() {
-        return [$this->nim, $this->nama, $this->tgl_lahir, $this->umur, $this->status];
+        return [
+            "nim" => $this->nim,
+            "nama" => $this->nama, 
+            "tgl_lahir" => $this->tgl_lahir,
+            "umur" => $this->umur,
+            "status" => $this->status
+        ];
     }
 }
 
