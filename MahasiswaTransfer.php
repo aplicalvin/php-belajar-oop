@@ -7,7 +7,7 @@ class MahasiswaTransfer extends Mahasiswa {
 
     public function __construct($daftar_nilai) {
         $this->daftar_nilai = $daftar_nilai;
-
+        $this->getIPK();
     }
 
 
