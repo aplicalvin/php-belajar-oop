@@ -1,17 +1,26 @@
 <?php
 class Mahasiswa {
     private $nim;
-    public $nama;
+    private $nama;
+    private $tgl_lahir;
+    private $umur;
 
 
-    public function setData($nim, $nama) {
+
+    public function setData($nim, $nama, $tgl_lahir) {
         $this->nim = $nim;
         $this->nama = $nama;
+        $this->tgl_lahir = $tgl_lahir;
+        $this->setUmur();
+    }
+
+    public function setUmur() {
+        $this->umur = date('Y') - substr($this->tgl_lahir, 0, 4);
     }
 
 
     public function getData() {
-        return [$this->nim, $this->nama];
+        return [$this->nim, $this->nama, $this->tgl_lahir, $this->umur];
     }
 }
 
