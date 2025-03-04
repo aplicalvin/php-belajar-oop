@@ -4,6 +4,12 @@ class Mahasiswa {
     private $nama;
     private $tgl_lahir;
     private $umur;
+    private $status;
+
+
+    public function __construct() {
+        $this->status = 'Aktif';
+    }
 
 
 
@@ -20,7 +26,7 @@ class Mahasiswa {
 
 
     public function getData() {
-        return [$this->nim, $this->nama, $this->tgl_lahir, $this->umur];
+        return [$this->nim, $this->nama, $this->tgl_lahir, $this->umur, $this->status];
     }
 }
 
